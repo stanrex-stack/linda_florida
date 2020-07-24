@@ -1,6 +1,10 @@
 from selenium.webdriver.common.by import By
 from behave import when, then
 
+RESULT_PAGE_HEADER_TEXT_LOCATOR = (By.CSS_SELECTOR, 'h1 div span.a-color-state.a-text-bold')
+SEARCH_RESULT_LIST_LOCATOR = (By.CSS_SELECTOR, 'div.s-search-results div.s-result-item h2')
+BESTSELLERS_LOGO_LOCATOR = (By.CSS_SELECTOR, 'span[data-a-badge-color = "sx-orange"]')
+
 
 SEARCH_RESULT_LIST_LOCATOR = (By.CSS_SELECTOR, 'div.s-search-results div.s-result-item h2')
 @then('LF RESULT Verify Amount Of Results Is {number}')

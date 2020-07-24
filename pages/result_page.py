@@ -15,17 +15,6 @@ class ResultPage(Page):
         self.wait_for_element_to_appear(*self.SEARCH_RESULT_LIST_LOCATOR)
         self.verify_element_count(expected_number, *self.SEARCH_RESULT_LIST_LOCATOR)
 
-    def verify_bestsellers_are_present(self):
-        list = self.driver.find_elements(*self.BESTSELLERS_LOGO_LOCATOR)
-        if len(list) > 0:
-            return True
-        else:
-            return False
 
-    def open_bestsellers_in_another_window(self):
-       a =  self.driver.find_elements(*self.SEARCH_RESULT_LIST_LOCATOR)
-       for index in range(len(a)):
-           b = a[index].find_elements(*self.BESTSELLERS_LOGO_LOCATOR)
-           print(b)
 
 
